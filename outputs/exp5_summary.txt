@@ -1,0 +1,30 @@
+
+✅ **Ensemble Experiment Complete:**
+
+📊 **Individual Models:**
+   Model 1 (seed=42):  B = 4.67%
+   Model 2 (seed=123): B = 6.67%
+   Model 3 (seed=999): B = 5.50%
+   Average:            B = 5.61% ± 1.00%
+
+🏆 **Ensemble Performance:**
+   Target A: 34.17% (-4.00% vs baseline)
+   Target B: 4.83% (+0.17% vs baseline)
+   Target C: 0.0942 (-0.0004 vs baseline)
+
+📁 **Files Generated:**
+   • exp5_ensemble_results.csv
+   • exp5_ensemble_comparison.png
+   • exp5_confusion_comparison.png
+   • ensemble_model_1_seed42.h5
+   • ensemble_model_2_seed123.h5
+   • ensemble_model_3_seed999.h5
+
+🎯 **Conclusion:**
+   ⚖️  ENSEMBLE NEUTRAL
+   Either use ensemble or baseline - similar performance
+
+📈 **Next Steps:**
+   • Select best model (ensemble or baseline)
+   • Retrain on full 3,000 samples
+   • Create final submission

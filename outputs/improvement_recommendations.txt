@@ -1,0 +1,66 @@
+
+📋 **Analysis of Baseline Performance:**
+
+✅ **What's Working Well:**
+
+1. Target A Performance (38.2%):
+   • 3.8× better than random (10%)
+   • Reasonable for 10-class problem with limited data
+   • No severe overfitting visible in learning curves
+
+2. Target C Performance (MAE: 0.0945):
+   • Better than predicting mean
+   • Sigmoid activation working well
+   • Residuals reasonably distributed
+
+3. Training Stability:
+   • Smooth learning curves
+   • Early stopping triggered appropriately
+   • No gradient explosions or NaN values
+
+⚠️  **Areas for Improvement:**
+
+1. Target B Performance (4.7%):
+   • Only 1.5× better than random (3.1%)
+   • Hardest task: 32 classes, ~75-90 samples each
+   • Needs more capacity or specialized architecture
+   
+   **Possible experiments:**
+     → Increase Head B capacity (bigger layers)
+     → Increase loss weight for Target B
+     → Add more regularization
+     → Try different architectures
+
+2. Potential Overfitting:
+   • Train-val gap visible in Target A
+   • Could benefit from stronger regularization
+   
+   **Possible experiments:**
+     → Increase dropout rates
+     → Add L2 regularization
+     → Reduce model capacity slightly
+
+3. Learning Rate:
+   • May have plateaued too early
+   
+   **Possible experiments:**
+     → Try different initial learning rates
+     → Different learning rate schedules
+     → Different optimizers (SGD with momentum, AdamW)
+
+📈 **Recommended Experiments (Priority Order):**
+
+**HIGH PRIORITY:**
+1. Increase Head B capacity (256→512 or add layers)
+2. Increase Target B loss weight (1.5 → 2.0 or 3.0)
+3. Try batch size variations (16 or 64)
+
+**MEDIUM PRIORITY:**
+4. Stronger regularization (higher dropout)
+5. Different optimizer configurations
+6. Adjust learning rate schedule
+
+**LOW PRIORITY:**
+7. Deeper backbone (4 conv blocks)
+8. Different activation functions
+9. Ensemble methods

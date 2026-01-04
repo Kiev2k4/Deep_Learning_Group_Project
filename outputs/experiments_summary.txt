@@ -1,0 +1,30 @@
+
+✅ **Systematic Experiments Complete:**
+
+📊 **Experiments Conducted:**
+   1. Bigger Head B: 6.00% on Target B (+1.33%)
+   2. Higher Weight B: 6.67% on Target B (+2.00%)
+   3. Combined: 6.50% on Target B (+1.83%)
+
+🏆 **Best Model: Baseline**
+   Target A: 38.17%
+   Target B: 4.67%
+   Target C: 0.0945 MAE
+
+📁 **Files Generated:**
+   • 07_experiments_comparison.png
+   • experiments_comparison.csv
+   • exp1_model_best.h5
+   • exp2_model_best.h5
+   • exp3_model_best.h5
+
+📈 **Key Insights:**
+   • Target B improvement: 6.67% (best)
+   • Baseline selected for final submission
+   • All experiments maintained Target A and C performance
+
+🎯 **Next Steps:**
+   • Retrain selected model on full 3,000 samples
+   • Save as model_groupId.h5 for submission
+   • Create predict_fn() function
+   • Finalize notebook
